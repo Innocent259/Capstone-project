@@ -1,0 +1,116 @@
+* {
+     box-sizing: border-box;
+}
+body{
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+.top-links {
+    display: flex;
+    gap: 1rem;
+    margin-right: 2rem;
+    place-content: end;
+}
+
+ion-icon {
+    color: #272a31;
+}
+
+.menu-icon{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.section-1 {
+    background-color: rgba(211, 211, 211, 0.8);
+    margin: 4.5rem 1rem;
+}
+
+.section-1-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: .5rem;
+}
+
+.subtitle {
+    color: #ec3d29;
+}
+
+.header {
+    color: #ec3d29;
+}
+
+.section-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7.5rem;
+    background: #272a31 url(./images/speaker.svg) no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 1rem;
+}
+
+.program-data {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.data-x {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    height: 3.75rem;
+    width: auto;
+    border: 1px solid red;
+    height: 7rem;
+    background-color: rgba(39, 42, 49, .8);
+}
+
+.btn {
+    height: 3rem;
+    width: auto;
+    background-color: #ec3d29;
+    margin: auto;
+    padding: 0;
+}
+
+.section-3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7.5rem;
+}
+
+.program-data {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+.speaker-details {
+    display: flex;
+    gap: .5rem;
+    place-content: center;
+    align-items: center;
+    border: 1px solid green;
+}
+
+.speaker {
+    height: 4rem;
+    width: 4rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+
