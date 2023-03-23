@@ -7,10 +7,7 @@ body{
 }
 
 .top-links {
-    display: flex;
-    gap: 1rem;
-    margin-right: 2rem;
-    place-content: end;
+    display: none;
 }
 
 ion-icon {
@@ -21,10 +18,11 @@ ion-icon {
     height: 2.5rem;
     width: 2.5rem;
 }
-
-.logo {
-    height: 50px;
-    width: auto;
+.logo-1 {
+    display: none;
+}
+nav .navbar-nav{
+    display: none;
 }
 
 .section-1 {
@@ -97,20 +95,85 @@ ion-icon {
 
 }
 .speaker-details {
-    display: flex;
-    gap: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto;
+    grid-column-gap: 1rem;
     place-content: center;
     align-items: center;
     border: 1px solid green;
+    height: auto;
 }
 
 .speaker {
-    height: 4rem;
-    width: 4rem;
+    height: 10rem;
+    width: 10rem;
 }
 
 ul li {
     list-style: none;
 }
 
+/* ABOUT PAGE */
 
+.about-logo {
+    width: 100%;
+}
+
+.prev-meeting {
+    width: 100%;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    background-color: #272a31;
+    width: 100%;
+    padding: 2rem;
+}
+
+.about-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.partner-x {
+    height: 50px;
+    width: 55px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .top-links {
+        display: flex;
+        gap: 1rem;
+        margin-right: 2rem;
+        place-content: end;
+    }
+
+    nav {
+        height: 100px;
+        border: 1px solid yellow;
+        width: 100%;
+        padding: 50px;
+        background-color: rgb(107, 125, 125);
+    }
+
+    .logo-1 {
+        height: 50px;
+        width: 20%;
+    }
+
+    .menu-icon {
+        display: none;
+
+    }
+
+    
+
+}
