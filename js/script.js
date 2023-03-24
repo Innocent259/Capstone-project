@@ -1,54 +1,108 @@
-//Menu
+const menuList = document.querySelector('.menu-section');
+const menuIcon = document.querySelector('.menu');
+const allSpeakers = document.querySelector('.speakers');
 
-const menu = document.querySelector('.menu-icon')
-const menuList = document.querySelector('.navbar-nav')
+menuIcon.addEventListener('click', (e) => {
+  if (e.target.classList.contains('menu')) {
+    menuList.style.display = 'flex';
+    menuIcon.style.display = 'none';
+  }
+});
 
-menu.addEventListener('click', () => {
-    console.log("ready to go!")
-    menuList.classList.toggle('show')
-})
+menuList.addEventListener('click', (e) => {
+  const clicked = e.target.classList.contains('links');
+  if (clicked) {
+    menuList.style.display = 'none';
+    menuIcon.style.display = 'flex';
+  }
+});
 
-//More button
-const dataForSpeakers = [
-    {
-        image: "./images/President-Paul-Kagame.png",
-        title: "President Paul Kagame",
-        about: "Paul Kagame is a Rwandan politician and former military officer who is the fourth and current president of Rwanda since 2000"
-    },
-    {
-        image: "./images/President-Paul-Kagame.png",
-        title: "President Paul Kagame",
-        about: "Paul Kagame is a Rwandan politician and former military officer who is the fourth and current president of Rwanda since 2000"
-    },
-    {
-        image: "./images/President-Paul-Kagame.png",
-        title: "President Paul Kagame",
-        about: "Paul Kagame is a Rwandan politician and former military officer who is the fourth and current president of Rwanda since 2000"
-    },
-    {
-        image: "./images/President-Paul-Kagame.png",
-        title: "President Paul Kagame",
-        about: "President Paul Kagame"
-    }
-]
-const speakers = document.querySelector('#more');
-const newElement = document.createElement('div');
-newElement.className = "new-element"
-function handleClick() {
-   let content = dataForSpeakers.map(item => 
-     `
-    <div class="speaker-details">
-        <img src=${item.image} class="speaker">
-        <span>
-            <h5>${item.title}</h5>
-            <hr class="line2">
-            <p>${item.about}</p>
-        </span>
-    </div>
-    `
-).join('')
-document.body.appendChild(newElement)
-speakers.style.display = 'none'
-newElement.innerHTML = content;
+const data = [
+  {
+    Name: 'Paul Kagame',
+    Title: 'President of the Republic of Rwanda',
+    Description: 'Paul Kagame is a Rwandan politician and former military officer who is the fourth and current president of Rwanda since 2000.',
+    Img: './images/speaker1.png',
+    Alt: 'speaker1',
+  },
+
+  {
+    Name: 'Gianni Infantino',
+    Title: 'FIFA President',
+    Description: 'Giovanni Vincenzo "Gianni" Infantino is a Swiss football administrator and the current president of FIFA. He was first elected to the office during the 2016.',
+    Img: './images/speaker2.png',
+    Alt: 'speaker2',
+  },
+
+  {
+    Name: 'Fatma Samoura',
+    Title: 'Secretary General',
+    Description: 'Fatma Samba Diouf Samoura is a Senegalese former diplomat and senior executive. She was appointed as the first female Secretary General of FIFA by President Gianni Infantino.',
+    Img: './images/fifaspeaker2.png',
+    Alt: 'speaker3',
+  },
+
+  {
+    Name: 'Gianni Infantino',
+    Title: 'FIFA President',
+    Description: 'Giovanni Vincenzo "Gianni" Infantino is a Swiss football administrator and the current president of FIFA. He was first elected to the office during the 2016.',
+    Img: './images/speaker2.png',
+    Alt: 'speaker4',
+  },
+
+  {
+    Name: 'Fatma Samoura',
+    Title: 'Secretary General',
+    Description: 'Fatma Samba Diouf Samoura is a Senegalese former diplomat and senior executive. She was appointed as the first female Secretary General of FIFA by President Gianni Infantino.',
+    Img: './images/fifaspeaker2.png',
+    Alt: 'speaker5',
+  },
+
+  {
+    Name: 'Paul Kagame',
+    Title: 'President of the Republic of Rwanda',
+    Description: 'Paul Kagame is a Rwandan politician and former military officer who is the fourth and current president of Rwanda since 2000.',
+    Img: './images/speaker1.png',
+    Alt: 'speaker6',
+  },
+];
+
+function guestSpeakers() {
+  let content = '';
+  for (let i = 0; i < data.length; i += 1) {
+    content += `
+        <li class="guest">
+        <img src="${data[i].Img}" alt="${data[i].Alt}">
+        <section>
+        <h3>
+        ${data[i].Name}
+        </h3>
+        <p class="p1">
+        ${data[i].Title}
+        </p>
+        <p class="p2">
+        ${data[i].Description}
+        </p>
+        </section>
+        </li>`;
+  }
+
+  allSpeakers.innerHTML = content;
 }
-speakers.addEventListener('click', handleClick)
+
+guestSpeakers();
+
+const loadMoreBtn = document.querySelector('#load-more');
+let currentItem = 2;
+
+loadMoreBtn.onclick = () => {
+  const boxes = [...document.querySelectorAll('.sec3 .speakers .guest')];
+  for (let i = currentItem; i < currentItem + 2; i += 1) {
+    boxes[i].style.display = 'inline-block';
+  }
+  currentItem += 2;
+
+  if (currentItem >= boxes.length) {
+    loadMoreBtn.style.display = 'none';
+  }
+};
