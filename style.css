@@ -20,6 +20,14 @@ body {
   font-size: 1.1rem;
 }
 
+.element.style {
+  display: flex;
+  background: black;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+
 a {
   text-decoration: none;
 }
@@ -107,7 +115,7 @@ footer .foot-1 ul {
 
 .sec1 {
   padding: 16px;
-  background: url(./important-img/home-bg.png);
+  background: url('./images/home-bg-desk.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -119,14 +127,14 @@ footer .foot-1 ul {
 }
 
 .main-title {
-  background-image: url(./images/texture.jpg);
+  background-image: url('./images/Texture.jpg');
   color: transparent;
   font-weight: bolder;
   font-size: 2rem;
   text-align: center;
-  padding: 1rem 0 2.5rem 0;
   background-clip: unset;
   -webkit-background-clip: text;
+  margin-top: 1rem;
 }
 
 .title {
@@ -159,8 +167,6 @@ footer .foot-1 ul {
 
 .sec2 {
   background-color: #272a32;
-  background-image: url(important-img/diamond.png);
-  width: 100%;
   color: var(--color-white);
   display: flex;
   flex-direction: column;
@@ -174,10 +180,6 @@ footer .foot-1 ul {
 .sec-2-title {
   font-size: 30px;
   align-self: center;
-}
-
-.guest img {
-  background-image: url(./important-img/image-bg.png);
 }
 
 .sec3 .speakers .guest img {
@@ -233,8 +235,6 @@ footer .foot-1 ul {
 
 .join {
   display: flex;
-
-  /* display: none; */
   background-color: var(--color-secondary);
   flex-direction: row;
   justify-content: center;
@@ -358,7 +358,7 @@ footer .foot-last h3 small {
 
 .about .about-sec1 .about-title {
   color: var(--color-lightblack);
-  font-size: 35px;
+  font-size: 23px;
   padding: 35px;
   margin: 10px;
   text-align: center;
@@ -521,10 +521,6 @@ footer .foot-last h2 {
     background-color: rgb(65, 64, 64);
   }
 
-  footer .foot-1 ul {
-    display: none;
-  }
-
   .header .nav1 ul {
     width: 100%;
     display: flex;
@@ -584,10 +580,6 @@ footer .foot-last h2 {
     height: 50px;
   }
 
-  .guest img {
-    background-image: url(./important-img/image-bg-desk.png);
-  }
-
   .header .heads-all ul li img {
     width: 10rem;
     height: 3.9rem;
@@ -643,10 +635,6 @@ footer .foot-last h2 {
 
   .sec1 {
     padding: 3rem;
-    background: url(./important-img/home-bg-desk.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     width: 100%;
   }
 
@@ -733,7 +721,6 @@ footer .foot-last h2 {
 
   .sec2 {
     background-color: #272a32;
-    background-image: url(./important-img/diamond.png);
     width: 100%;
     color: var(--color-white);
     display: flex;
@@ -836,7 +823,6 @@ footer .foot-last h2 {
   }
 
   .sec3 {
-    padding: 2rem 15%;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -859,13 +845,8 @@ footer .foot-last h2 {
 
   .sec3 .speakers .guest img {
     position: relative;
-    background-size: 120px 100px;
     background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
     object-fit: cover;
-    padding-left: 6%;
-    padding-top: 6%;
   }
 
   .about .about-sec1 .logo img {
@@ -935,10 +916,6 @@ footer .foot-last h2 {
   }
 
   .sub-about {
-    background-image: url(./important-img/home-bg-desk.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;

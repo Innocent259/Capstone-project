@@ -64,7 +64,7 @@ Installed node.js and any IDE like Visual Studio Code.
 Clone this repository to your desired folder:
 https://github.com/Innocent259/Capstone-project
 
-Change directory to My-portflolio in your terminal
+Change directory Capstone-project in your terminal
 ### Install
 
 Install this project with: 

@@ -20,12 +20,20 @@ body {
   font-size: 1.1rem;
 }
 
+.element.style {
+  display: flex;
+  background: black;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+
 a {
   text-decoration: none;
 }
 
 li img {
-  width: 15%;
+  width: 13%;
   height: 30%;
 }
 
@@ -58,8 +66,7 @@ li img {
   margin-left: 8px;
 }
 
-.menu-sec {
-  display: none;
+.menu-section {
   flex-direction: row;
   justify-content: space-between;
   position: fixed;
@@ -69,30 +76,11 @@ li img {
   right: 0;
   gap: 5px;
   background-color: var(--color-lightblack);
+  display: none;
   -webkit-animation-name: menuanime;
   animation-name: menuAnime;
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
-}
-
-@-webkit-keyframes menuAnime {
-  0% {
-    transform: translateY(-60%) scaleY(0);
-  }
-
-  100% {
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes menuAnime {
-  0% {
-    transform: translateY(-60%) scaleY(0);
-  }
-
-  100% {
-    transform: translateY(0) scale(1);
-  }
 }
 
 footer .foot-1 ul {
@@ -109,27 +97,23 @@ footer .foot-1 ul {
   display: none;
 }
 
-.menu-sec nav {
+.menu-section nav {
   padding-top: 70px;
   padding-left: 28px;
 }
 
-.menu-sec a h2 {
+.menu-section a h2 {
   padding: 20px 10px;
   color: var(--color-lightgrey);
 }
 
-.menu-sec .cancel {
+.menu-section .cancel {
   color: var(--color-lightgrey);
   font-size: 60px;
   padding-right: 15px;
 }
 
 .sub-about {
-  background-image: url(./important-img/home-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,9 +123,6 @@ footer .foot-1 ul {
 
 .sec1 {
   padding: 16px;
-  background: url(./important-img/home-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
 }
 
@@ -186,7 +167,6 @@ footer .foot-1 ul {
 
 .sec2 {
   background-color: #272a32;
-  background-image: url(important-img/diamond.png);
   width: 100%;
   color: var(--color-white);
   display: flex;
@@ -201,10 +181,6 @@ footer .foot-1 ul {
 .sec-2-title {
   font-size: 30px;
   align-self: center;
-}
-
-.guest img {
-  background-image: url(./important-img/image-bg.png);
 }
 
 .sec3 .speakers .guest img {
@@ -397,7 +373,7 @@ footer .foot-last h3 small {
 }
 
 .one {
-  background: url('./images/72nd-FIFA-Congress\ \(1\).webp');
+  background: #ec5242 url('./images/72nd-FIFA-Congress\ \(1\).webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -476,7 +452,7 @@ footer .foot-last h2 span {
   width: 60px;
   height: 50px;
   border: 3px solid black;
-  border-radius: 90px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -519,7 +495,6 @@ footer .foot-last h2 {
   footer .foot-1 ul {
     width: 100%;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-around;
@@ -589,10 +564,6 @@ footer .foot-last h2 {
     height: 50px;
   }
 
-  .guest img {
-    background-image: url(./important-img/image-bg-desk.png);
-  }
-
   .header .heads-all ul li img {
     width: 10rem;
     height: 3.9rem;
@@ -648,7 +619,6 @@ footer .foot-last h2 {
 
   .sec1 {
     padding: 3rem;
-    background: url(./important-img/home-bg-desk.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -661,7 +631,7 @@ footer .foot-last h2 {
     position: relative;
     font-weight: 900;
     font-size: 60px;
-    margin: 8px;
+    margin-top: 1rem;
   }
 
   @keyframes animate {
@@ -738,7 +708,6 @@ footer .foot-last h2 {
 
   .sec2 {
     background-color: #272a32;
-    background-image: url(./important-img/diamond.png);
     width: 100%;
     color: var(--color-white);
     display: flex;
@@ -919,9 +888,6 @@ footer .foot-last h2 {
   }
 
   .sub-about {
-    background-image: url(./important-img/aboutdesktop-bg.png);
-    background-position: 0 0;
-    background-repeat: no-repeat;
     box-sizing: border-box;
     background-size: contain;
     display: flex;
@@ -943,7 +909,6 @@ footer .foot-last h2 {
   .about .about-sec1 .about-title {
     color: var(--color-lightblack);
     font-size: 50px;
-    padding: 8rem 0 3rem 0;
   }
 
   .about .about-sec1 .logo {
@@ -1023,7 +988,6 @@ footer .foot-last h2 {
   footer .foot-1 {
     width: 100%;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
     padding: 30px;
@@ -1036,12 +1000,11 @@ footer .foot-last h2 {
   }
 
   footer .foot-last {
-    background-color: #272a31;
-    color: var(--color-white);
+    background-color: #fff;
+    color: #272a31;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    padding: 40px 15%;
+    padding: 40px;
     justify-content: space-between;
   }
 
