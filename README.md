@@ -47,8 +47,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Loom video Link](https://www.loom.com/share/c6adcc8020ae40c9a7d64e3bc3f9a937)
-- [Live Demo Link](https://innocent259.github.io/My-portfolio/)
+- [Loom video Link](https://www.loom.com/share/595aa5699d274054b89f5919d3cf3baa)
+- [Live Demo Link](https://innocent259.github.io/Capstone-project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
